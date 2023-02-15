@@ -20,7 +20,10 @@ const Search = () => {
 
     useEffect(()=>{
         dispatch(fetchSingleProduct(name))
-    },[])
+    },[dispatch,name])
+
+    console.log(singlePro)
+
   return (
     <>
     <Helmet>
