@@ -7,7 +7,7 @@ import { productActions } from "./store";
 export const fetchProducts = (id) => {
   return async (dispatch) => {
     try {
-      const {data}  = await axios.get(`/track/${id}`);
+      const {data}  = await axios.get(`https://api.deezer.com/track/${id}`);
       // const data2 = data.json()
       console.log(data)
       dispatch(productActions.fetchProducts(data));
@@ -25,7 +25,7 @@ export const fetchSingleProduct = (name) => {
   console.log(name)
     return async (dispatch) => {
       try {
-        const { data } = await axios.get(`/search?q=${name}`);
+        const { data } = await axios.get(`https://api.deezer.com/search?q=${name}`);
         dispatch(productActions.singleFetch(data));
         console.log(data)
       } catch (err) {

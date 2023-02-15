@@ -2,8 +2,8 @@ import React from 'react'
 
 const top = () => {
   return (
-    <section class="top-header">
-    <div class="single drake">
+    <section className="top-header">
+    <div className="single drake">
     </div>
 </section>
   )

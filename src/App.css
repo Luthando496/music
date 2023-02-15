@@ -357,6 +357,7 @@ header .back-img{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
     width: 100%;
 }
@@ -581,4 +582,27 @@ font-weight: bolder;
     font-family: 'Roboto';
     font-style: italic;
     /* color: lavenderblush; */
+}
+
+.about-header{
+    background: linear-gradient(rgba(29, 27, 27, 0.5),rgba(12, 0, 0, 0.5)), url('../public/img/pexels-pixabay-257904.jpg');
+    width: 100vw;
+    height:80vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-content{
+height: 100vh;
+/* width: 40%; */
+/* margin: 0 auto; */
+line-height: 2;
+font-family: 'Roboto',sans-serif;
+letter-spacing: 10px;
+}
+
+.about-inner{
+font-size: 3rem;
+font-weight: 700;
+color: rgb(104, 255, 58);
 }

@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import {Link} from 'react-router-dom'
 import {Helmet} from 'react-helmet'
 
-
+// "proxy": "https://api.deezer.com",
 
 
 const Home = () => {

@@ -49,10 +49,10 @@ const Search = () => {
                  <img src={music.album.cover_xl} alt="artist1" />
             </div>
             <div className="card-body">
-                <h1 class="m-4">Artist: {music.artist.name}</h1>
-                <h1 class="m-4">Album: {music.album.title}</h1>
-                <h1 class="m-4 ">Title: {music.title_short}</h1>
-                <h2 class="m-4">Year : 2017</h2>
+                <h1 className="m-4">Artist: {music.artist.name}</h1>
+                <h1 className="m-4">Album: {music.album.title}</h1>
+                <h1 className="m-4 ">Title: {music.title_short}</h1>
+                <h2 className="m-4">Year : 2017</h2>
             </div>
         </div>
         </Link>

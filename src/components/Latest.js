@@ -49,42 +49,42 @@ const Latest = () => {
 </section>
 
 
-<section class="popular">
-        <h1 class="h1">Most popular</h1>
+<section className="popular">
+        <h1 className="h1">Most popular</h1>
 
-        <div class="latest-container">
-            <div class="card">
-                <div class="card-img">
+        <div className="latest-container">
+            <div className="card">
+                <div className="card-img">
                     <img src="img/pop1.jpg" alt="popularImage" />
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                     <h1>Thunder cat</h1>
                     <h2>2017</h2>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
+            <div className="card">
+                <div className="card-img">
                     <img src="./img/pop2.jpg" alt="popularImage" />
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                     <h1>Adele</h1>
                     <h2>2017</h2>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
+            <div className="card">
+                <div className="card-img">
                     <img src="./img/pop3.jpg" alt="popularImage" />
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                     <h1>Thunder cat</h1>
                     <h2>2018</h2>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
+            <div className="card">
+                <div className="card-img">
                     <img src="./img/pop4.jpg" alt="popularImage" />
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                     <h1>A.K.A</h1>
                     <h2>2020</h2>
                 </div>
