@@ -42,12 +42,12 @@ const Navbar = () => {
                 <li className="list p-7">
                     <Link className="link duration-150 hover:border-b-[1px] pb-4 transition-all border-emerald-500" to="/music">Music</Link>
                 </li>
-                <li className="list p-7">
+                {/* <li className="list p-7">
                     <Link className="link duration-150 hover:border-b-[1px] pb-4 transition-all border-emerald-500" to="/">Blog</Link>
                 </li>
                 <li className="list p-7">
                     <Link className="link duration-150 hover:border-b-[1px] pb-4 transition-all border-emerald-500" to="/">Contact</Link>
-                </li>
+                </li> */}
         </ul>
 
         <form className="list-icons flex basis-1/4 items-center" onSubmit={Submit}>

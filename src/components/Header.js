@@ -23,12 +23,12 @@ const Header = () => {
                 <li className="list p-7">
                     <Link className="link duration-150 hover:border-b-[1px] pb-4 transition-all border-emerald-500" to="/music">Music</Link>
                 </li>
-                <li className="list p-7">
+                {/* <li className="list p-7">
                     <Link className="link duration-150 hover:border-b-[1px] pb-4 transition-all border-emerald-500" to="/block">Blog</Link>
                 </li>
                 <li className="list p-7">
                     <Link className="link duration-150 hover:border-b-[1px] pb-4 transition-all border-emerald-500" to="/contact">Contact</Link>
-                </li>
+                </li> */}
         </ul>
 
         <ul className="list-icons flex justify-between items-center">

@@ -12,9 +12,9 @@ const Footer = () => {
             <li>
                 <Link to="/about" className='link' >About</Link>
             </li>
-            <li>
+            {/* <li>
                 <Link to="/" className='link' >Blog</Link>
-            </li>
+            </li> */}
             <li>
                 <Link to="/music" className='link' >Music</Link>
             </li>
