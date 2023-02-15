@@ -6,6 +6,7 @@ import { fetchSingleProduct } from '../store/actions'
 import Navbar from '../components/Navbar'
 import {Helmet} from 'react-helmet'
 import Loader from '../components/Loader'
+import Error from '../components/Error'
 
 
 
@@ -31,7 +32,13 @@ const Search = () => {
     {loading && <Loader />}
 
 <section className="albums">
-    <h1 className="h1">Most Popular Songs of {name}</h1><CAvatar color="primary" textColor="white">CUI</CAvatar>
+    <h1 className="h1">Most Popular Songs of {name}</h1>
+    
+
+    {loading && <Loader />}
+    
+    
+    {singlePro && singlePro.data.length < 1 && <Error name={'No Results of that search available'} />}
 
     <div className="albums-container">
     {singlePro && singlePro.data && singlePro.data.length > 0 && singlePro.data.map(music => (
@@ -43,6 +50,7 @@ const Search = () => {
             </div>
             <div className="card-body">
                 <h1 class="m-4">Artist: {music.artist.name}</h1>
+                <h1 class="m-4">Album: {music.album.title}</h1>
                 <h1 class="m-4 ">Title: {music.title_short}</h1>
                 <h2 class="m-4">Year : 2017</h2>
             </div>

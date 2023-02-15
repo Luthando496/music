@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Loader from '../components/Loader'
+import Error from '../components/Error'
 
 
 
 
 const MusicResults = () => {
     const {id} = useParams()
-    const {products,loading} = useSelector(state => state.product)
+    const {products,loading,err} = useSelector(state => state.product)
     console.log(products)
 
     const dispatch = useDispatch()
@@ -23,6 +24,8 @@ const MusicResults = () => {
     <>
     <Navbar />
     {loading && <Loader />}
+    {products && products.error && err &&  <Error name={products.error.message || err} />}
+    {err &&  <Error name={err} />}
     {products && products && (
         <section className='solo-artist w-screen'>
         <div className='solo-artist-img' style={{backgroundImage:`url(${products.artist && products.artist.picture_xl})`}}>

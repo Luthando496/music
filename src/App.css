@@ -329,7 +329,7 @@ header .back-img{
     padding: 1rem 0.7rem;
     border: 3px green solid;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .search-input:focus{
@@ -436,7 +436,7 @@ header .back-img{
 }
 
 .footer{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .footer-container{
@@ -557,14 +557,15 @@ font-weight: bolder;
 }
 
 .error{
-    background: #af6868;
-    height: 70vh;
-    margin-top: 6rem;
+    background: #030303;
+    height: 100vh;
+    /* margin-top: 6rem; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
     line-height:1.4;
+    color:red;
     /* text-spacing:2px; */
 }
 
@@ -572,12 +573,12 @@ font-weight: bolder;
     font-size: 4rem;
     font-family: 'Roboto';
     font-style: italic;
-    color: lavenderblush;
+    /* color: lavenderblush; */
 }
 
 .error h2{
     font-size: 3.5rem;
     font-family: 'Roboto';
     font-style: italic;
-    color: lavenderblush;
+    /* color: lavenderblush; */
 }

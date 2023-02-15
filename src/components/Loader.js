@@ -1,4 +1,4 @@
-import HashLoader from "react-spinners/HashLoader";
+import RingLoader from "react-spinners/RingLoader";
 
 const Loader = () => {
     const override = {
@@ -11,7 +11,7 @@ const Loader = () => {
     let color = "#07fc07";
   return (
     <div>
-    <HashLoader
+    <RingLoader
         className="loader"
         color={color}
         loading={loading}

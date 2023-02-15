@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
     <Helmet>
-        <title>{name} Results</title>
+        <title>Home Musica</title>
         <meta name="description" content="Helmet application" />
     </Helmet>
     <Header />

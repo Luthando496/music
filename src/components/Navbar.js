@@ -22,7 +22,7 @@ const Navbar = () => {
     
   return (
     <>
-    <section id="header-music " class="header-music bg-cyan-500">
+    <section id="header-music " class="header-music bg-black w-screen">
     <div class="header-container w-full">
     <nav class="navbar p-4 w-10/12 mx-auto flex justify-between items-center">
 
@@ -50,9 +50,9 @@ const Navbar = () => {
                 </li>
         </ul>
 
-        <form class="list-icons flex  items-center" onSubmit={Submit}>
-           <div class="form-input">
-            <input type="text" class="search-input" placeholder="search songs or artist" value={search} onChange={e => setSearch(e.target.value.toLowerCase())}  />
+        <form class="list-icons flex basis-1/4 items-center" onSubmit={Submit}>
+           <div class="form-input w-full">
+            <input type="text" class="search-input w-full" placeholder="search songs or artist or album" value={search} onChange={e => setSearch(e.target.value.toLowerCase())}  />
            </div>
         </form>
 
