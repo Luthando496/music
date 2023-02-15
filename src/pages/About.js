@@ -1,4 +1,6 @@
 import React from 'react'
+import Footer from '../components/Footer';
+import Latest from '../components/Latest';
 import Navbar from '../components/Navbar';
 
 const About = () => {
@@ -16,8 +18,11 @@ const About = () => {
         </header>
 
         <div className="about-hero">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, facilis praesentium. Hic explicabo, distinctio odit doloribus adipisci dolorem officiis dolore aperiam quam, eius reiciendis dignissimos mollitia! Provident, beatae quasi! Molestiae natus aperiam culpa unde ratione dolorem error ipsum, accusantium odit voluptas perferendis quibusdam debitis id.</p>
+            <Latest />
+
         </div>
+
+        <Footer />
     </section>
     </>
   )
