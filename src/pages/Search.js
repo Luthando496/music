@@ -41,7 +41,7 @@ const Search = () => {
     {loading && <Loader />}
     
     
-    {singlePro && singlePro.data.length < 1 && <Error name={'No Results of that search available'} />}
+    {singlePro && singlePro.data && singlePro.data.length < 1 && <Error name={'No Results of that search available'} />}
     {singlePro === null && <Error name={'No Results. Netlify'} />}
 
 
