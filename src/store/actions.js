@@ -1,8 +1,8 @@
 import axios from "axios";
 import { productActions } from "./store";
 
-// const clientID =33df413dac444e339b49bd0dc57fba7d;
-// const clientSecret = 727ecaf3686e4cd088d55e9e19b1b3bf;
+// "proxy": "https://api.deezer.com",
+const link = "https://api.deezer.com"
 
 export const fetchProducts = (id) => {
   return async (dispatch) => {

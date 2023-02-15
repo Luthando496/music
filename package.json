@@ -37,6 +37,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "https://api.deezer.com",
   "devDependencies": {
     "tailwindcss": "^3.2.6"
   }
