@@ -42,6 +42,8 @@ const Search = () => {
     
     
     {singlePro && singlePro.data.length < 1 && <Error name={'No Results of that search available'} />}
+    {singlePro === null && <Error name={'No Results. Netlify'} />}
+
 
     <div className="albums-container">
     {singlePro && singlePro.data && singlePro.data.length > 1 && singlePro.data.map(music => (
