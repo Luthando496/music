@@ -26,7 +26,7 @@ export const fetchSingleProduct = (name) => {
   console.log(name)
     return async (dispatch) => {
       try {
-        const data  = await fetch(`/search?q=${name}`).then(data => data.json())
+        const data  = await fetch(`/search?q=${name}`).then(data => data.json().catch(err=> console.log(err)))
         dispatch(productActions.singleFetch(data));
         console.log(data)
       } catch (err) {
