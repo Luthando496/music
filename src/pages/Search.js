@@ -46,21 +46,25 @@ const Search = () => {
 
 
     <div className="albums-container">
-    {singlePro && singlePro.data && singlePro.data.length > 1 && singlePro.data.map(music => (
-        <Link to={`/music/${music.id}`} key={music.id}>
-
+    {singlePro && singlePro.length > 0 && singlePro.map(music => (
+            music.albums && music.albums.items.map(i =>(
+        <>
+        {/* <Link to={`/music/${music.id}`} key={music.id}> */}
         <div className="card">
             <div className="card-img">
-                 <img src={music.album.cover_xl} alt="artist1" />
+
+                 <img src={i.data.coverArt.sources[2].url} alt="artist1" />
             </div>
             <div className="card-body">
-                <h1 className="m-4">Artist: {music.artist.name}</h1>
-                <h1 className="m-4">Album: {music.album.title}</h1>
-                <h1 className="m-4 ">Title: {music.title_short}</h1>
-                <h2 className="m-4">Year : 2017</h2>
+                {/* <h1 className="m-4">Artist: {mi.profile.name} {music.artists.items[1] && music.artists.items[1].profile.name}</h1> */}
+                <h1 className="m-4">Album: {i.data.name}</h1>
+                {/* <h1 className="m-4 ">Title: {music.title_short}</h1> */}
+                <h2 className="m-4">Year : {i.data.date.year}</h2>
             </div>
         </div>
-        </Link>
+        {/* </Link> */}
+        </>
+            ))
     ))}
 
     </div>
