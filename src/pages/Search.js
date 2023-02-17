@@ -56,7 +56,7 @@ const Search = () => {
                  <img src={i.data.coverArt.sources[2].url} alt="artist1" />
             </div>
             <div className="card-body">
-                {/* <h1 className="m-4">Artist: {mi.profile.name} {music.artists.items[1] && music.artists.items[1].profile.name}</h1> */}
+                <h1 className="m-4">Artist: {i.data.artists.items[0].profile.name} {i.data.artists.items[0] && i.data.artists.items[0].profile.name}</h1>
                 <h1 className="m-4">Album: {i.data.name}</h1>
                 {/* <h1 className="m-4 ">Title: {music.title_short}</h1> */}
                 <h2 className="m-4">Year : {i.data.date.year}</h2>

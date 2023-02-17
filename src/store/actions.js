@@ -27,7 +27,7 @@ export const fetchSingleProduct = (name) => {
       try {
         // const { data } = await axios.get(`/search?q=${name}`);
         const {data} = await axios.get('https://spotify81.p.rapidapi.com/search',{
-          params: {q: 'drake', type: 'multi', offset: '0', limit: '10', numberOfTopResults: '5'},
+          params: {q: `${name}`, type: 'multi', offset: '0', limit: '10', numberOfTopResults: '5'},
           headers: {
             'X-RapidAPI-Key': '9ca1b675cbmsh0a118d1e4608e5fp179722jsn09c6585af4f5',
             'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
