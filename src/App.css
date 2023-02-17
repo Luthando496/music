@@ -439,6 +439,8 @@ header .back-img{
 
 .footer{
     margin-top: 1rem;
+    position:absolute;
+    bottom:0;
 }
 
 .footer-container{
