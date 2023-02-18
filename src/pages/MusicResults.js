@@ -48,15 +48,33 @@ const MusicResults = () => {
                 <img src={products && products.data && products.data.artist.visuals.avatarImage.sources[0].url} alt={products.data && products.data.artist.profile.name}  />
              </div>
              <div className='results-card-text'>
-                <h1>Artist: {products.data && products.data.artist.profile.name}</h1>
+                <h1>Album: {products.data && products.data.artist.profile.name}</h1>
              </div>
-
-
-           
             </div>
             </>)}
-        
         </div>
+
+
+      <div className="ace">
+      <h1 className='text-5xl text-light text-center m-24'>Albums by {products.data && products.data.artist.profile.name}</h1>
+      <div className="albums-container mt-9 py-7">
+        <>
+    {products && products.data && products.data.artist.discography.albums.items && products.data.artist.discography.albums.items.map(music => (
+        <div className="card">
+            <div className="card-img">
+
+                 <img src={music.releases.items[0].coverArt.sources[2].url} alt="artist1" />
+            </div>
+            <div className="card-body">
+                <h1 className="fonh m-4 text-light">Artist: {music.releases.items[0].name}</h1>
+
+            </div>
+        </div>
+    ))}
+        </>
+      </div>
+      </div>
+        
         
         
     </section>

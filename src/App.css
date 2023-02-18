@@ -471,7 +471,8 @@ header .back-img{
     font-family: unset;
 }
 
-.albums .albums-container{
+
+.albums-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
@@ -494,6 +495,11 @@ header .back-img{
 }
 
 .albums .albums-container .card-body h1{
+    line-height: 1.4 ;
+    font-size: 1.4rem;
+}
+
+.ace .albums-container .card-body h1{
     line-height: 1.4 ;
     font-size: 1.4rem;
 }
@@ -525,7 +531,7 @@ header .back-img{
 .solo-artist{
     position: relative;
     height: 100vh;
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 4px 7px 4px rgba(5, 63, 255, 0.4);
 
 }
 
