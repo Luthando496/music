@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Footer from '../components/Footer'
 import {useDispatch,useSelector} from 'react-redux'
@@ -17,10 +17,9 @@ const Search = () => {
     const {singlePro,loading} = useSelector(state => state.product)
 
 
-
     useEffect(()=>{
         dispatch(fetchSingleProduct(name))
-    },[dispatch,name])
+    },[dispatch,name,loading])
 
     console.log(singlePro)
 
