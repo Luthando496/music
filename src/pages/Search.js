@@ -35,7 +35,7 @@ const Search = () => {
     {loading && <Loader />}
 
 <section className="albums">
-    <h1 className="h1">Most Popular Songs of {name}</h1>
+    <h1 className="h1">Albums</h1>
     
 
     {loading && <Loader />}
@@ -49,7 +49,7 @@ const Search = () => {
     {singlePro && singlePro.length > 0 && singlePro.map(music => (
             music.albums && music.albums.items.map(i =>(
         <>
-        {/* <Link to={`/music/${music.id}`} key={music.id}> */}
+        <Link to={`/music/${i.data.artists.items[0].uri.split(':')[2]}`} key={i.data.artists.items[0].uri.split(':')[2]}>
         <div className="card">
             <div className="card-img">
 
@@ -62,13 +62,15 @@ const Search = () => {
                 <h2 className="m-4">Year : {i.data.date.year}</h2>
             </div>
         </div>
-        {/* </Link> */}
+        </Link>
         </>
             ))
     ))}
     </div>
 
+    <h1 className='text-6xl font-light m-9'>Tracks or Songs</h1>
     <div className="albums-container">
+
     {singlePro && singlePro.length > 0 && singlePro.map(music => (
             music.tracks && music.tracks.map(i =>(
         <>
@@ -81,6 +83,31 @@ const Search = () => {
             <div className="card-body">
                 <h1 className="m-4">Song: {i.data.albumOfTrack.name}</h1>
                 <h1 className="m-4">Artist: {i.data.artists.items[0].profile.name} {i.data.artists.items[1] && i.data.artists.items[1].profile.name}</h1>
+                {/* <h2 className="m-4">Year : {i.data.date.year}</h2> */}
+            </div>
+        </div>
+        </Link>
+        </>
+            ))
+    ))}
+    </div>
+
+    <h1 className='text-6xl font-light m-9'>Artists or Bands</h1>
+
+    <div className="albums-container">
+
+    {singlePro && singlePro.length > 0 && singlePro.map(music => (
+            music.artists && music.artists.items.map(i =>(
+        <>
+        <Link to={`/music/${i.data.uri.split(':')[2]}`} key={i.data.uri.split(':')[2]}>
+        <div className="card">
+            <div className="card-img">
+
+                 <img src={i.data.visuals && i.data.visuals.avatarImage ? i.data.visuals.avatarImage.sources[0].url : '../../public/img/man-303792_640.png'} alt="artist1" />
+            </div>
+            <div className="card-body">
+                <h1 className="m-4">Artist: {i.data.profile.name}</h1>
+                {/* <h1 className="m-4">Artist: {i.data.artists.items[0].profile.name} {i.data.artists.items[1] && i.data.artists.items[1].profile.name}</h1> */}
                 {/* <h2 className="m-4">Year : {i.data.date.year}</h2> */}
             </div>
         </div>

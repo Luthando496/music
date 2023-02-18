@@ -473,7 +473,7 @@ header .back-img{
 
 .albums .albums-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     width: 93%;
     margin: 0 auto;
@@ -525,6 +525,7 @@ header .back-img{
 .solo-artist{
     position: relative;
     height: 100vh;
+    box-shadow: 4px 4px 4px black;
 
 }
 

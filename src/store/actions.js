@@ -7,12 +7,39 @@ const link = "https://api.deezer.com"
 export const fetchProducts = (id) => {
   return async (dispatch) => {
     try {
-      const {data}  = await axios.get(`https://spotify81.p.rapidapi.com/track_credits`,{
+      const {data}  = await axios.get(`https://spotify81.p.rapidapi.com/artist_overview`,{
         params: {id: `${id}`},
         headers: {
           'X-RapidAPI-Key': '9ca1b675cbmsh0a118d1e4608e5fp179722jsn09c6585af4f5',
           'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
         }
+      });
+
+      // const data2 = data.json()
+      console.log(data)
+      dispatch(productActions.fetchProducts(data));
+    } catch (err) {
+      console.log(err);
+      dispatch(productActions.fetchProductsError(err.response && err.response.data.message
+        ? err.response.data.message
+        : err.message,));
+  }
+}
+}
+
+
+
+
+export const fetchArtists = (id) => {
+  return async (dispatch) => {
+    try {
+      const {data}  = await axios.get(`https://spotify81.p.rapidapi.com/artist_overview`,{
+        params: {id: `${id}`},
+        headers: {
+          'X-RapidAPI-Key': '9ca1b675cbmsh0a118d1e4608e5fp179722jsn09c6585af4f5',
+          'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
+        }
+
       });
 
       // const data2 = data.json()
