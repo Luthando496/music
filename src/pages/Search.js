@@ -56,7 +56,7 @@ const Search = () => {
                  <img src={i.data.coverArt.sources[2].url} alt="artist1" />
             </div>
             <div className="card-body">
-                <h1 className="m-4">Artist: {i.data.artists.items[0].profile.name} {i.data.artists.items[0] && i.data.artists.items[0].profile.name}</h1>
+                <h1 className="m-4">Artist: {i.data.artists.items[0].profile.name} {i.data.artists.items[1] && i.data.artists.items[1].profile.name}</h1>
                 <h1 className="m-4">Album: {i.data.name}</h1>
                 {/* <h1 className="m-4 ">Title: {music.title_short}</h1> */}
                 <h2 className="m-4">Year : {i.data.date.year}</h2>
@@ -66,7 +66,28 @@ const Search = () => {
         </>
             ))
     ))}
+    </div>
 
+    <div className="albums-container">
+    {singlePro && singlePro.length > 0 && singlePro.map(music => (
+            music.tracks && music.tracks.map(i =>(
+        <>
+        <Link to={`/music/${i.data.id}`} key={i.data.id}>
+        <div className="card">
+            <div className="card-img">
+
+                 <img src={i.data.albumOfTrack.coverArt.sources[2].url} alt="artist1" />
+            </div>
+            <div className="card-body">
+                <h1 className="m-4">Song: {i.data.albumOfTrack.name}</h1>
+                <h1 className="m-4">Artist: {i.data.artists.items[0].profile.name} {i.data.artists.items[1] && i.data.artists.items[1].profile.name}</h1>
+                {/* <h2 className="m-4">Year : {i.data.date.year}</h2> */}
+            </div>
+        </div>
+        </Link>
+        </>
+            ))
+    ))}
     </div>
 
     </section>
