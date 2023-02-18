@@ -32,13 +32,11 @@ const Search = () => {
     </Helmet>
     <Navbar />
 
-    {loading && <Loader />}
-
-<section className="albums">
+    {loading ?  <Loader /> : (
+        <section className="albums">
     <h1 className="h1">Albums</h1>
     
 
-    {loading && <Loader />}
     
     
     {singlePro && singlePro.data && singlePro.data.length < 1 && <Error name={'No Results of that search available'} />}
@@ -69,12 +67,13 @@ const Search = () => {
     </div>
 
     <h1 className='text-6xl font-light m-9'>Tracks or Songs</h1>
+
     <div className="albums-container">
 
     {singlePro && singlePro.length > 0 && singlePro.map(music => (
             music.tracks && music.tracks.map(i =>(
         <>
-        <Link to={`/music/${i.data.id}`} key={i.data.id}>
+        <Link to={`/music/${i.data.artists.items[0].uri.split(':')[2]}`} key={i.data.id}>
         <div className="card">
             <div className="card-img">
 
@@ -117,7 +116,10 @@ const Search = () => {
     ))}
     </div>
 
-    </section>
+</section>
+    )}
+
+
 
     <Footer />
     </>

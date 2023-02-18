@@ -23,7 +23,6 @@ const MusicResults = () => {
   return (
     <>
     <Navbar />
-    {loading && <Loader />}
     {products && products.error && err &&  <Error name={products.error.message || err} />}
     {err &&  <Error name={err} />}
     {products && products && (
@@ -37,9 +36,10 @@ const MusicResults = () => {
         </div>
     </section>)}
 
-    <section className='results w-screen mt-24'>
-        
-        <div className='results-outer'>
+    <section className='results  w-screen '>
+    {loading ?  <Loader /> :(
+      <>
+      <div className='results-outer'>
           {products && products &&(
             <>
 
@@ -53,10 +53,12 @@ const MusicResults = () => {
             </div>
             </>)}
         </div>
+        
+
 
 
       <div className="ace">
-      <h1 className='text-5xl text-light text-center m-24'>Albums by {products.data && products.data.artist.profile.name}</h1>
+      <h1 className='text-5xl tid text-light text-center m-24'>Albums by {products.data && products.data.artist.profile.name}</h1>
       <div className="albums-container mt-9 py-7">
         <>
     {products && products.data && products.data.artist.discography.albums.items && products.data.artist.discography.albums.items.map(music => (
@@ -66,14 +68,16 @@ const MusicResults = () => {
                  <img src={music.releases.items[0].coverArt.sources[2].url} alt="artist1" />
             </div>
             <div className="card-body">
-                <h1 className="fonh m-4 text-light">Artist: {music.releases.items[0].name}</h1>
+                <h1 className="fonh m-4 text-light">Album: {music.releases.items[0].name}</h1>
 
             </div>
         </div>
     ))}
         </>
       </div>
-      </div>
+      </div> 
+      </>
+      )}
         
         
         
